@@ -35,7 +35,7 @@ import mail from "../../public/assets/icons/mail.svg";
 import { partnerData } from "@/lib/partners";
 import { productData } from "@/lib/productData";
 // import "animate.css/animate.min.css";
-import WOW from "wowjs";
+// import WOW from "wowjs";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-transparent");
@@ -60,6 +60,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const WOW = require("wowjs");
     const wow = new WOW.WOW({
       live: false, // Opsi ini untuk tidak memantau elemen baru yang ditambahkan secara dinamis
     });
