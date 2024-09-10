@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private-page
+Allow: /
+Sitemap: https://www.unhiraagrikultur.com/sitemap.xml
