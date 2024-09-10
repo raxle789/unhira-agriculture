@@ -57,6 +57,7 @@ const config: Config = {
         },
         coolyellow: "hsla(var(--coolyellow))",
         coolgreen: "hsla(var(--coolgreen))",
+        coolblack: "hsl(var(--coolblack))",
       },
       borderRadius: {
         lg: "var(--radius)",

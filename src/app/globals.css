@@ -1,3 +1,6 @@
+/* styles/globals.css */
+@import "animate.css/animate.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,6 +61,7 @@ body {
     --coolgreen: 105, 45%, 50%, 1;
     --coolgray-2: 300, 1%, 29%, 1;
     --coolgray-3: 73, 43%, 4%, 1;
+    --coolblack: 73, 43%, 4%;
   }
   .dark {
     --background: 240 10% 3.9%;
