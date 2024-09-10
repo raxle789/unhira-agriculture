@@ -34,8 +34,14 @@ import call from "../../public/assets/icons/call.svg";
 import mail from "../../public/assets/icons/mail.svg";
 import { partnerData } from "@/lib/partners";
 import { productData } from "@/lib/productData";
-// import "animate.css/animate.min.css";
-// import WOW from "wowjs";
+import {
+  BannerTitle,
+  CompanyName,
+  CompanyVision,
+  AboutCompany1,
+  AboutCompany2,
+} from "./tiny-components";
+// import Head from "next/head";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-transparent");
@@ -68,6 +74,9 @@ export default function Home() {
   }, []);
   return (
     <>
+      {/* <Head>
+        <link rel="canonical" href="https://unhiraagrikultur.com/" />
+      </Head> */}
       <header
         className={`flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${bgColor}`}
       >
@@ -141,11 +150,10 @@ export default function Home() {
           />
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
             <h1 className="text-5xl font-bold uppercase text-coolyellow wow animate__animated animate__fadeIn">
-              Supplier Sayur dan Buah
+              <BannerTitle />
             </h1>
             <h2 className="text-xl mt-2 wow animate__animated animate__fadeIn">
-              Visi kami menjadi supplier terbaik yang selalu dapat diandalkan
-              dengan mengutamakan kepuasan pelanggan.
+              <CompanyVision />
             </h2>
           </div>
           <div className="absolute inset-0 bg-black opacity-50 z-0" />
@@ -161,21 +169,13 @@ export default function Home() {
                 Tentang Perusahaan
               </h2>
               <h1 className="font-bold text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
-                Unhira Agrikultur
+                <CompanyName />
               </h1>
               <p className="text-coolblack mb-1 text-justify">
-                Kami adalah perusahaan yang bergerak di bidang pengadaan barang
-                berupa sayur, buah, dan groceries. Pada proses pengadaan barang,
-                kami bermitra dengan petani lokal untuk memenuhi kebutuhan
-                sayuran khusus dengan standar kualitas barang yang baik.
-                Bekerjasama dengan banyak pedagang UMKM untuk memenuhi kebutuhan
-                buah dan groceries dengan kualitas dan kapasitas yang diinginkan
-                pelanggan kami.
+                <AboutCompany1 />
               </p>
               <p className="text-coolblack text-justify">
-                Perusahaan kami bersifat B2B karena hanya menjadi mitra usaha
-                kuliner dan pariwisata yang menjamin ketersediaan bahan baku
-                yang dibutuhkan pelanggan- pelanggan kami.
+                <AboutCompany2 />
               </p>
             </div>
           </div>
