@@ -421,7 +421,7 @@ export default function Home() {
 
         <div
           id="produk"
-          className="mt-16 mb-[85px] flex flex-col justify-center items-center gap-8"
+          className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-8"
         >
           <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
             Katalog Produk
@@ -473,7 +473,7 @@ export default function Home() {
 
         <div
           id="mitra"
-          className="mt-16 mb-[85px] flex flex-col justify-center items-center gap-7"
+          className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-7"
         >
           <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
             Mitra Kami
