@@ -159,8 +159,6 @@ export default function Home() {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              {/* <SheetHeader> */}
-              {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
               <div className="flex flex-col items-start justify-center gap-3 mt-5">
                 <SheetClose asChild>
                   <Button
@@ -168,9 +166,7 @@ export default function Home() {
                     className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
                     onClick={() => handleNavigate("#beranda")}
                   >
-                    {/* <Link href="#beranda" className="focus:text-coolyellow"> */}
                     Beranda
-                    {/* </Link> */}
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
@@ -179,12 +175,7 @@ export default function Home() {
                     className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
                     onClick={() => handleNavigate("#tentang-kami")}
                   >
-                    {/* <Link
-                      href="#tentang-kami"
-                      className="focus:text-coolyellow"
-                    > */}
                     Tentang Kami
-                    {/* </Link> */}
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
@@ -193,9 +184,7 @@ export default function Home() {
                     className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
                     onClick={() => handleNavigate("#produk")}
                   >
-                    {/* <Link href="#produk" className="focus:text-coolyellow"> */}
                     Produk
-                    {/* </Link> */}
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
@@ -204,9 +193,7 @@ export default function Home() {
                     className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
                     onClick={() => handleNavigate("#mitra")}
                   >
-                    {/* <Link href="#mitra" className="focus:text-coolyellow"> */}
                     Mitra
-                    {/* </Link> */}
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
@@ -215,14 +202,10 @@ export default function Home() {
                     className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
                     onClick={() => handleNavigate("#s&k")}
                   >
-                    {/* <Link href="#s&k" className="focus:text-coolyellow"> */}
                     S&K
-                    {/* </Link> */}
                   </Button>
                 </SheetClose>
               </div>
-              {/* <SheetDescription></SheetDescription> */}
-              {/* </SheetHeader> */}
             </SheetContent>
           </Sheet>
         </div>

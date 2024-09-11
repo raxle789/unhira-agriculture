@@ -24,10 +24,82 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const jsonLd = {
+  //   '@context': 'https://schema.org',
+  //   '@type': 'Product',
+  //   name: product.name,
+  //   image: product.image,
+  //   description: product.description,
+  // }
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Unhira Agrikultur",
+    url: "https://www.unhiraagrikultur.com",
+    // "logo": "https://www.domain-anda.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "0897-9246-882",
+      contactType: "Customer Service",
+      areaServed: "ID",
+      availableLanguage: ["Indonesian"],
+    },
+    // "sameAs": [
+    //   "https://www.facebook.com/username",
+    //   "https://www.twitter.com/username",
+    //   "https://www.instagram.com/username"
+    // ]
+  };
+
+  // const productSchema = {
+  //   "@context": "https://schema.org",
+  //   "@type": "Product",
+  //   name: "Nama Produk",
+  //   image: "https://www.domain-anda.com/produk.jpg",
+  //   description: "Deskripsi produk.",
+  //   sku: "SKU12345",
+  //   offers: {
+  //     "@type": "Offer",
+  //     priceCurrency: "IDR",
+  //     price: "500000",
+  //     url: "https://www.domain-anda.com/produk",
+  //     priceValidUntil: "2024-12-31",
+  //     availability: "https://schema.org/InStock",
+  //     itemCondition: "https://schema.org/NewCondition",
+  //     seller: {
+  //       "@type": "Organization",
+  //       name: "Nama Perusahaan",
+  //     },
+  //   },
+  // };
+
+  // const partnerSchema = {
+  //   "@context": "https://schema.org",
+  //   "@type": "Organization",
+  //   name: "Nama Mitra",
+  //   url: "https://www.mitra.com",
+  //   logo: "https://www.mitra.com/logo.png",
+  // };
+
   return (
     <html lang="en" className="scroll-smooth scroll-pt-[70px]">
       <head>
         <link rel="canonical" href="https://www.unhiraagrikultur.com/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        {/* <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerSchema) }}
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
