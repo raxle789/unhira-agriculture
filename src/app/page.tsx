@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -20,6 +21,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
@@ -32,6 +39,9 @@ import payment from "../../public/assets/icons/payment.svg";
 import guarantee from "../../public/assets/icons/guarantee.svg";
 import call from "../../public/assets/icons/call.svg";
 import mail from "../../public/assets/icons/mail.svg";
+import menu from "../../public/assets/icons/menu.svg";
+import blackMenu from "../../public/assets/icons/black-menu.svg";
+import { StaticImageData } from "next/image";
 import { partnerData } from "@/lib/partners";
 import { productData } from "@/lib/productData";
 import {
@@ -41,20 +51,27 @@ import {
   AboutCompany1,
   AboutCompany2,
 } from "./tiny-components";
-// import Head from "next/head";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-transparent");
   const [fontColor, setFontColor] = useState("text-white");
+  const [menuImage, setMenuImage] = useState<StaticImageData>(menu);
+  const router = useRouter();
+
+  const handleNavigate = (url: string) => {
+    router.push(url);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setBgColor("bg-background");
         setFontColor("text-coolblack");
+        setMenuImage(blackMenu);
       } else {
         setBgColor("bg-transparent");
         setFontColor("text-white");
+        setMenuImage(menu);
       }
     };
 
@@ -74,11 +91,8 @@ export default function Home() {
   }, []);
   return (
     <>
-      {/* <Head>
-        <link rel="canonical" href="https://unhiraagrikultur.com/" />
-      </Head> */}
       <header
-        className={`flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${bgColor}`}
+        className={`border-none flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${bgColor}`}
       >
         <div>
           <h1 className="font-bold text-xl text-coolgreen">
@@ -86,7 +100,7 @@ export default function Home() {
           </h1>
         </div>
         <div>
-          <NavigationMenu className="hidden md:block">
+          <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="#beranda" legacyBehavior passHref>
@@ -135,24 +149,97 @@ export default function Home() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <Button variant="outline" className="md:hidden">
-            Button
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                className="lg:hidden hover:bg-transparent active:bg-transparent focus:bg-transparent"
+              >
+                <Image className="w-7 h-auto" src={menuImage} alt="ikon menu" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              {/* <SheetHeader> */}
+              {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
+              <div className="flex flex-col items-start justify-center gap-3 mt-5">
+                <SheetClose asChild>
+                  <Button
+                    variant="ghost"
+                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
+                    onClick={() => handleNavigate("#beranda")}
+                  >
+                    {/* <Link href="#beranda" className="focus:text-coolyellow"> */}
+                    Beranda
+                    {/* </Link> */}
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    variant="ghost"
+                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
+                    onClick={() => handleNavigate("#tentang-kami")}
+                  >
+                    {/* <Link
+                      href="#tentang-kami"
+                      className="focus:text-coolyellow"
+                    > */}
+                    Tentang Kami
+                    {/* </Link> */}
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    variant="ghost"
+                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
+                    onClick={() => handleNavigate("#produk")}
+                  >
+                    {/* <Link href="#produk" className="focus:text-coolyellow"> */}
+                    Produk
+                    {/* </Link> */}
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    variant="ghost"
+                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
+                    onClick={() => handleNavigate("#mitra")}
+                  >
+                    {/* <Link href="#mitra" className="focus:text-coolyellow"> */}
+                    Mitra
+                    {/* </Link> */}
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    variant="ghost"
+                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
+                    onClick={() => handleNavigate("#s&k")}
+                  >
+                    {/* <Link href="#s&k" className="focus:text-coolyellow"> */}
+                    S&K
+                    {/* </Link> */}
+                  </Button>
+                </SheetClose>
+              </div>
+              {/* <SheetDescription></SheetDescription> */}
+              {/* </SheetHeader> */}
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
 
       <main className="bg-coolgray-1">
         <div id="beranda" className="relative h-screen">
           <Image
-            className="absolute w-full h-full object-cover"
+            className="absolute w-full h-full object-left xl:object-center object-cover"
             src={bannerImage}
             alt="banner image"
           />
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
-            <h1 className="text-5xl font-bold uppercase text-coolyellow wow animate__animated animate__fadeIn">
+            <h1 className="text-[1.6rem] text-center md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
               <BannerTitle />
             </h1>
-            <h2 className="text-xl mt-2 wow animate__animated animate__fadeIn">
+            <h2 className="text-base p-4 md:px-8 xl:px-0 text-center md:text-xl md:p-0 lg:text-xl mt-2">
               <CompanyVision />
             </h2>
           </div>
@@ -161,17 +248,17 @@ export default function Home() {
 
         <div
           id="tentang-kami"
-          className="flex items-center justify-between pt-20 pb-14"
+          className="flex flex-col-reverse items-center justify-center gap-9 lg:gap-0 lg:flex-row lg:items-center lg:justify-between pt-20 pb-14"
         >
           <div className="flex items-center justify-center">
-            <div className="max-w-[65%] wow animate__animated animate__fadeIn">
-              <h2 className="text-lg text-coolgreen font-semibold">
+            <div className="max-w-[75%] md:max-w-[65%] wow animate__animated animate__fadeIn">
+              <h2 className="text-base md:text-lg text-coolgreen font-semibold">
                 Tentang Perusahaan
               </h2>
-              <h1 className="font-bold text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
+              <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
                 <CompanyName />
               </h1>
-              <p className="text-coolblack mb-1 text-justify">
+              <p className="text-coolblack mb-2 text-justify">
                 <AboutCompany1 />
               </p>
               <p className="text-coolblack text-justify">
@@ -180,24 +267,24 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="w-[400px] h-auto rounded-l-md"
+            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-l-md"
             src={ownerPhoto}
             alt="foto pemilik unhira agrikultur"
           />
         </div>
 
-        <div className="flex items-center justify-between py-14">
+        <div className="flex flex-col items-center justify-center gap-9 lg:items-center lg:justify-between lg:flex-row lg:gap-0 py-14">
           <Image
-            className="w-[400px] h-auto rounded-r-md"
+            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-md"
             src={ownerAndFarmer}
             alt="foto pemilik unhira agrikultur bersama petani"
           />
           <div className="flex items-center justify-center">
             <div className="max-w-[85%]">
-              <h1 className="font-bold text-[1.6rem] text-center text-coolyellow mb-6 wow animate__animated animate__fadeIn">
+              <h1 className="font-bold text-xl md:text-[1.6rem] text-center text-coolyellow mb-6 wow animate__animated animate__fadeIn">
                 Mengapa Harus Memilih Kami?
               </h1>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="border-none drop-shadow-xl wow animate__animated animate__fadeInUp">
                   <CardContent className="flex items-center gap-2 pt-5 p-5">
                     <Image
@@ -261,15 +348,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="p-4">
-          <div className="flex flex-col items-center justify-center py-14 rounded-md bg-coolgreen">
-            <h1 className="font-bold text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
+        <div className="md:p-4">
+          <div className="flex flex-col items-center justify-center py-14 md:rounded-md bg-coolgreen">
+            <h1 className="font-bold text-xl md:text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
               Manfaat Bermitra Dengan Kami
             </h1>
-            <div className="flex justify-center gap-6">
-              <Card className="border-none p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] w-1/2 drop-shadow-none wow animate__animated animate__fadeInUp">
+            <div className="flex flex-col items-center justify-center xl:items-stretch xl:flex-row gap-6">
+              <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
                 <CardHeader>
-                  <CardTitle className="text-coolyellow">Sebelum</CardTitle>
+                  <CardTitle className="text-xl lg:text-2xl text-coolyellow">
+                    Sebelum
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-coolblack">
@@ -295,9 +384,11 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-none p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] w-1/2 wow animate__animated animate__fadeInUp">
+              <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
                 <CardHeader>
-                  <CardTitle className="text-coolyellow">Sesudah</CardTitle>
+                  <CardTitle className="text-xl lg:text-2xl text-coolyellow">
+                    Sesudah
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-coolblack">
@@ -332,7 +423,7 @@ export default function Home() {
           id="produk"
           className="mt-16 mb-[85px] flex flex-col justify-center items-center gap-8"
         >
-          <h1 className="text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
+          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
             Katalog Produk
           </h1>
           <div className="w-[80%]">
@@ -359,17 +450,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative h-60">
+        <div className="relative h-80 md:h-60">
           <Image
             className="absolute w-full h-full object-cover"
             src={vegetables}
             alt="latar belakang sayur-sayuran"
           />
-          <div className="relative z-10 flex flex-col justify-center h-full text-white px-16">
-            <h1 className="text-2xl font-bold text-coolyellow">
+          <div className="relative z-10 flex flex-col justify-center h-full text-white px-12 md:px-16">
+            <h1 className="text-xl md:text-[1.6rem] lg:text-2xl font-bold text-coolyellow">
               Unhira Agrikultur
             </h1>
-            <h2 className="text-lg mt-2 text-justify">
+            <h2 className="text-base mt-2 text-justify">
               Besar harapan kami untuk pihak restoran atau hotel dapat
               mempergunakan jasa yang telah kami tawarkan agar dapat membantu
               menjamin ketersediaan dan kualitas bahan makanan kepada para tamu
@@ -384,7 +475,7 @@ export default function Home() {
           id="mitra"
           className="mt-16 mb-[85px] flex flex-col justify-center items-center gap-7"
         >
-          <h1 className="text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
+          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
             Mitra Kami
           </h1>
           <Carousel
@@ -426,10 +517,10 @@ export default function Home() {
             alt="latar belakang satu box sayur-sayuran"
           />
           <div className="relative z-10 flex flex-col justify-center items-center gap-7 h-full pt-12 pb-16">
-            <h1 className="text-[1.6rem] font-bold text-white wow animate__animated animate__fadeIn">
+            <h1 className="text-xl md:text-[1.6rem] font-bold text-white wow animate__animated animate__fadeIn">
               Syarat dan Ketentuan
             </h1>
-            <Card className="border-none p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] w-[80%] drop-shadow-none">
+            <Card className="border-none p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] w-[87%] md:w-[80%] drop-shadow-none">
               <CardContent className="pt-6">
                 <p className="text-coolblack wow animate__animated animate__fadeIn">
                   Order dilakukan maksimal H-1 pengiriman.
@@ -491,8 +582,10 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="grid grid-cols-3 bg-coolblack py-12 px-8">
-        <h1 className="text-2xl font-bold text-coolgreen">Unhira Agrikultur</h1>
+      <footer className="grid grid-cols-1 md:grid-cols-3 bg-coolblack py-12 px-8 gap-7 md:gap-0">
+        <h1 className="text-xl md:text-[1.4rem] font-bold text-coolgreen">
+          Unhira Agrikultur
+        </h1>
         <div>
           <h3 className="text-coolyellow font-semibold mb-3">Hubungi Kami</h3>
           <div className="flex items-center gap-2">
