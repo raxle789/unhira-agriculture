@@ -37,8 +37,6 @@ import box from "../../public/assets/icons/box.svg";
 import order from "../../public/assets/icons/order.svg";
 import payment from "../../public/assets/icons/payment.svg";
 import guarantee from "../../public/assets/icons/guarantee.svg";
-import call from "../../public/assets/icons/call.svg";
-import mail from "../../public/assets/icons/mail.svg";
 import menu from "../../public/assets/icons/menu.svg";
 import blackMenu from "../../public/assets/icons/black-menu.svg";
 import { StaticImageData } from "next/image";
@@ -50,6 +48,10 @@ import {
   CompanyVision,
   AboutCompany1,
   AboutCompany2,
+  BeforeUsing,
+  AfterUsing,
+  WishWords,
+  Footer,
 } from "./tiny-components";
 
 export default function Home() {
@@ -250,7 +252,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-l-md"
+            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-none lg:rounded-l-md"
             src={ownerPhoto}
             alt="foto pemilik unhira agrikultur"
           />
@@ -258,7 +260,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center gap-9 lg:items-center lg:justify-between lg:flex-row lg:gap-0 py-14">
           <Image
-            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-md"
+            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-l-none lg:rounded-r-md"
             src={ownerAndFarmer}
             alt="foto pemilik unhira agrikultur bersama petani"
           />
@@ -344,27 +346,7 @@ export default function Home() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-coolblack">
-                    Jumlah barang yang di dapat tidak sesuai kebutuhan
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kualitas barang yang didapat tidak bagus
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Harga barang yang di dapat sangat tinggi
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Tidak bisa mengklaim barang yang rusak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">Pelayanan yang buruk</p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kebutuhan mendadak tidak dapat dipenuhi
-                  </p>
+                  <BeforeUsing />
                 </CardContent>
               </Card>
               <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
@@ -374,28 +356,7 @@ export default function Home() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-coolblack">
-                    Barang yang dikirim sesuai pesanan dan kebutuhan
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kualitas barang bagus dan pengiriman tepat waktu
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">Harga sangat bersaing</p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Dapat melayani kebutuhan mendadak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Bisa mengklaim jika terdapat barang yang rusak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Pelayanan yang baik dan bersedia menerima kritik saran dari
-                    pelanggan
-                  </p>
+                  <AfterUsing />
                 </CardContent>
               </Card>
             </div>
@@ -444,11 +405,7 @@ export default function Home() {
               Unhira Agrikultur
             </h1>
             <h2 className="text-base mt-2 text-justify">
-              Besar harapan kami untuk pihak restoran atau hotel dapat
-              mempergunakan jasa yang telah kami tawarkan agar dapat membantu
-              menjamin ketersediaan dan kualitas bahan makanan kepada para tamu
-              sehingga meningkatkan brand image hotel sebagai hotel terbaik
-              pilihan masyarakat.
+              <WishWords />
             </h2>
           </div>
           <div className="absolute inset-0 bg-black opacity-50 z-0" />
@@ -565,29 +522,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="grid grid-cols-1 md:grid-cols-3 bg-coolblack py-12 px-8 gap-7 md:gap-0">
-        <h1 className="text-xl md:text-[1.4rem] font-bold text-coolgreen">
-          Unhira Agrikultur
-        </h1>
-        <div>
-          <h3 className="text-coolyellow font-semibold mb-3">Hubungi Kami</h3>
-          <div className="flex items-center gap-2">
-            <Image className="w-5 h-auto" src={call} alt="ikon telepon" />
-            <p className="text-white">0897 9246 882</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <Image className="w-5 h-auto" src={mail} alt="ikon email" />
-            <p className="text-white">unhiraagrikultur@gmail.com</p>
-          </div>
-        </div>
-        <div>
-          <h3 className="text-coolyellow font-semibold mb-3">Alamat</h3>
-          <p className="text-white">
-            Jl. Permata Hijau Permai Jl. Mirah No.20 Blok BR, Kaliabang Tengah,
-            Kec. Bekasi Utara, Kota Bks, Jawa Barat 17125
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

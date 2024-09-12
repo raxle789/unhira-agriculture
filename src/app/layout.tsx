@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Unhira Agrikultur",
-  description: "Supplier sayur dan buah bekasi",
+  description: "Supplier sayur dan buah terbaik di bekasi",
 };
 
 export default function RootLayout({
@@ -24,14 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const jsonLd = {
-  //   '@context': 'https://schema.org',
-  //   '@type': 'Product',
-  //   name: product.name,
-  //   image: product.image,
-  //   description: product.description,
-  // }
-
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -45,6 +37,62 @@ export default function RootLayout({
       areaServed: "ID",
       availableLanguage: ["Indonesian"],
     },
+    location: {
+      "@type": "Place",
+      name: "Kantor Pusat Unhira Agrikultur",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Jl. Permata Hijau Permai Jl. Mirah No.20 Blok BR, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bekasi, Jawa Barat",
+        addressLocality: "Bekasi",
+        postalCode: "17125",
+        addressCountry: "ID",
+      },
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Monday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Tuesday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Wednesday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Thursday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Friday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "08:00",
+        closes: "19:00",
+      },
+    ],
     // "sameAs": [
     //   "https://www.facebook.com/username",
     //   "https://www.twitter.com/username",
@@ -52,27 +100,219 @@ export default function RootLayout({
     // ]
   };
 
-  // const productSchema = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Product",
-  //   name: "Nama Produk",
-  //   image: "https://www.domain-anda.com/produk.jpg",
-  //   description: "Deskripsi produk.",
-  //   sku: "SKU12345",
-  //   offers: {
-  //     "@type": "Offer",
-  //     priceCurrency: "IDR",
-  //     price: "500000",
-  //     url: "https://www.domain-anda.com/produk",
-  //     priceValidUntil: "2024-12-31",
-  //     availability: "https://schema.org/InStock",
-  //     itemCondition: "https://schema.org/NewCondition",
-  //     seller: {
-  //       "@type": "Organization",
-  //       name: "Nama Perusahaan",
-  //     },
-  //   },
-  // };
+  const productsSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Aragula Rocket",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Brokoli",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Daun Ketumbar",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Kol Ungu",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Lettuce",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Lolorosa",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Parsley",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Radisio",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Romaine",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Thyme",
+      image: "https://www.unhiraagrikultur.com/#produk",
+      // description: "Deskripsi produk pertama.",
+      // sku: "SKU12345",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "IDR",
+        price: "50000",
+        url: "https://www.unhiraagrikultur.com/#produk",
+        priceValidUntil: "2025-06-30",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: "Unhira Agrikultur",
+        },
+      },
+    },
+    // Tambahkan lebih banyak produk di sini
+  ];
 
   // const partnerSchema = {
   //   "@context": "https://schema.org",
@@ -85,18 +325,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth scroll-pt-[70px]">
       <head>
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.unhiraagrikultur.com/" />
+        <link
+          rel="next"
+          href="https://www.unhiraagrikultur.com/#tentang-kami"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
         />
-        {/* <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productsSchema) }}
+        />
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerSchema) }}
         /> */}
