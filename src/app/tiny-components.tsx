@@ -1,6 +1,6 @@
 import Image from "next/image";
-import call from "../../public/assets/icons/call.svg";
-import mail from "../../public/assets/icons/mail.svg";
+import call from "../../public/assets/icons/call.png";
+import mail from "../../public/assets/icons/mail.png";
 import { Separator } from "@/components/ui/separator";
 
 export const BannerTitle = () => {
