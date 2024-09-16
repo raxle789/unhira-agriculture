@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Unhira Agrikultur",
+  title: "Unhira Agrikultur - Supplier sayur dan buah di bekasi",
   description: "Supplier sayur dan buah terbaik di bekasi",
 };
 
