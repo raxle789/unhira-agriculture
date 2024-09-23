@@ -16,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Unhira Agrikultur - Supplier sayur dan buah di bekasi",
-  description: "Supplier sayur dan buah terbaik di bekasi",
+  description:
+    "Kami adalah perusahaan yang bergerak di bidang pengadaan sayur, buah, dan groceries. Kami bermitra dengan petani lokal untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas terbaik. Bekerjasama dengan banyak pedagang UMKM untuk memenuhi kebutuhan buah dan groceries dengan kualitas dan kapasitas yang diinginkan pelanggan kami.",
 };
 
 export default function RootLayout({

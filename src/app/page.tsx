@@ -30,7 +30,7 @@ import {
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
-import vegetables from "../../public/assets/images/vegetables.jpg";
+import vegetables from "../../public/assets/images/vegetables1.jpg";
 import closeUpVegetables from "../../public/assets/images/close-up-vegetables.jpg";
 import toa from "../../public/assets/icons/toa.svg";
 import box from "../../public/assets/icons/box.svg";
@@ -218,7 +218,7 @@ export default function Home() {
           <Image
             className="absolute w-full h-full object-left xl:object-center object-cover"
             src={bannerImage}
-            alt="banner image"
+            alt="Supplier Sayur dan Buah Segar Terbaik di Bekasi"
           />
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
             <h1 className="text-[1.6rem] text-center md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
@@ -396,7 +396,7 @@ export default function Home() {
 
         <div className="relative h-80 md:h-60">
           <Image
-            className="absolute w-full h-full object-cover"
+            className="absolute w-full h-full object-cover object-bottom"
             src={vegetables}
             alt="latar belakang sayur-sayuran"
           />
