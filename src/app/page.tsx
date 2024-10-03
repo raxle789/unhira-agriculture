@@ -28,12 +28,16 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import bannerImage from "../../public/assets/images/banner.jpg";
-import unhiraLogo from "../../public/assets/images/logo-unhira.png";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
 import ownerAndFarmer2 from "../../public/assets/images/foto-dengan-petani2.jpg";
 import vegetables from "../../public/assets/images/vegetables1.jpg";
 import closeUpVegetables from "../../public/assets/images/close-up-vegetables.jpg";
+import doksi1 from "../../public/assets/images/doksi1.jpg";
+import doksi2 from "../../public/assets/images/doksi2.jpg";
+import doksi3 from "../../public/assets/images/doksi3.jpg";
+import doksi4 from "../../public/assets/images/doksi4.jpg";
+import doksi5 from "../../public/assets/images/doksi5.jpg";
 import toa from "../../public/assets/icons/toa.svg";
 import box from "../../public/assets/icons/box.svg";
 import order from "../../public/assets/icons/order.svg";
@@ -50,6 +54,7 @@ import {
   CompanyVision,
   AboutCompany1,
   AboutCompany2,
+  AboutCompany3,
   BeforeUsing,
   AfterUsing,
   WishWords,
@@ -70,6 +75,8 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       if (wordsHeader === "Unhira Agrikultur") {
+        setWordsHeader("CV. Yayang Karunia Usaha");
+      } else if (wordsHeader === "CV. Yayang Karunia Usaha") {
         setWordsHeader("Solusi Bisnis Kuliner Anda");
       } else {
         setWordsHeader("Unhira Agrikultur");
@@ -123,7 +130,7 @@ export default function Home() {
               <NavigationMenuItem>
                 <Link href="#beranda" legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
+                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
                   >
                     Beranda
                   </NavigationMenuLink>
@@ -132,7 +139,7 @@ export default function Home() {
               <NavigationMenuItem>
                 <Link href="#tentang-kami" legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
+                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
                   >
                     Tentang Kami
                   </NavigationMenuLink>
@@ -141,7 +148,7 @@ export default function Home() {
               <NavigationMenuItem>
                 <Link href="#produk" legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
+                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
                   >
                     Produk
                   </NavigationMenuLink>
@@ -150,7 +157,7 @@ export default function Home() {
               <NavigationMenuItem>
                 <Link href="#mitra" legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
+                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
                   >
                     Mitra
                   </NavigationMenuLink>
@@ -159,7 +166,7 @@ export default function Home() {
               <NavigationMenuItem>
                 <Link href="#s&k" legacyBehavior passHref>
                   <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
+                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
                   >
                     S&K
                   </NavigationMenuLink>
@@ -234,7 +241,7 @@ export default function Home() {
           <Image
             className="absolute w-full h-full object-left xl:object-center object-cover"
             src={bannerImage}
-            alt="Supplier Sayur dan Buah Segar Terbaik di Bekasi"
+            alt="Supplier Sayur dan Buah Segar Terbaik Bekasi"
           />
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
             <h1 className="text-[1.6rem] text-center px-3 md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
@@ -262,8 +269,11 @@ export default function Home() {
               <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
                 <AboutCompany1 />
               </p>
-              <p className="text-[15px] md:text-base text-coolblack text-justify">
+              <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
                 <AboutCompany2 />
+              </p>
+              <p className="text-[15px] md:text-base text-coolblack text-justify">
+                <AboutCompany3 />
               </p>
             </div>
           </div>
@@ -500,6 +510,149 @@ export default function Home() {
             <CarouselPrevious className="border-none shadow-md" />
             <CarouselNext className="border-none shadow-md" />
           </Carousel>
+        </div>
+
+        <div className="px-8 xl:px-14 pb-24 relative">
+          <h1 className="text-center mb-9 text-xl md:text-[1.6rem] font-bold text-coolyellow">
+            Dokumentasi Tim
+          </h1>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div id="column1" className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto md:h-[200px] max-w-full rounded-lg object-cover object-center"
+                  src={doksi2}
+                  alt="gallery-photo"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              {/* <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center "
+                  src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div> */}
+            </div>
+            <div id="column2" className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src={doksi5}
+                  alt="gallery-photo"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              {/* <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center "
+                  src="https://docs.material-tailwind.com/img/team-3.jpg"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div> */}
+            </div>
+            <div id="column3" className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto md:h-[200px] max-w-full rounded-lg object-cover object-center"
+                  src={doksi3}
+                  alt="gallery-photo"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              <div>
+                <Image
+                  className="h-auto md:h-[250px] max-w-full rounded-lg object-cover object-center "
+                  src={doksi1}
+                  alt="gallery-photo"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              {/* <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src="https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div> */}
+            </div>
+            <div id="column4" className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src={doksi4}
+                  alt="gallery-photo"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div>
+              {/* <div>
+                <img
+                  className="h-auto max-w-full rounded-lg object-cover object-center"
+                  src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+                  alt="gallery-photo"
+                  loading="lazy"
+                  // width={100}
+                  // height={50}
+                  // fill={true}
+                  // layout="fill"
+                />
+              </div> */}
+            </div>
+          </div>
         </div>
 
         <div id="s&k" className="relative">
