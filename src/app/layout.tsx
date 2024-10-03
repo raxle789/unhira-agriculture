@@ -1,26 +1,26 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Unhira Agrikultur - Supplier sayur dan buah di bekasi",
   description:
-    "Kami adalah perusahaan yang bergerak di bidang pengadaan sayur, buah, dan groceries. Kami bermitra dengan petani lokal untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas terbaik. Bekerjasama dengan banyak pedagang UMKM untuk memenuhi kebutuhan buah dan groceries dengan kualitas dan kapasitas yang diinginkan pelanggan kami.",
+    "Kami adalah perusahaan yang bergerak di bidang pengadaan barang berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran, dan kafe. Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas barang dan pelayanan terbaik.",
 };
 
 export default function RootLayout({

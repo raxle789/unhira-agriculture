@@ -4,7 +4,7 @@ import mail from "../../public/assets/icons/mail.png";
 import { Separator } from "@/components/ui/separator";
 
 export const BannerTitle = () => {
-  return <span>Solusi Bisnis Kuliner Anda</span>;
+  return <span>Supplier Sayur dan Buah di Bekasi</span>;
 };
 
 export const CompanyName = () => {
@@ -38,14 +38,14 @@ export const AboutCompany2 = () => {
     <span>
       Kami juga bekerjasama dengan banyak pedagang yang saling berkomitmen dgn
       kualitas untuk memenuhi kebutuhan buah dan groceries dengan kualitas dan
-      kapasitas yang diinginkan pelanggan kami.
+      kapasitas yang diinginkan pelanggan kami.
     </span>
   );
 };
 
 export const BeforeUsing = () => {
   return (
-    <div>
+    <div className="text-[15px] md:text-base">
       <p className="text-coolblack">
         Jumlah barang yang di dapat tidak sesuai kebutuhan
       </p>
@@ -65,7 +65,7 @@ export const BeforeUsing = () => {
 
 export const AfterUsing = () => {
   return (
-    <div>
+    <div className="text-[15px] md:text-base">
       <p className="text-coolblack">
         Barang yang dikirim sesuai pesanan dan kebutuhan
       </p>

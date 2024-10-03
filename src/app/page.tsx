@@ -28,6 +28,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import bannerImage from "../../public/assets/images/banner.jpg";
+import unhiraLogo from "../../public/assets/images/logo-unhira.png";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
 import ownerAndFarmer2 from "../../public/assets/images/foto-dengan-petani2.jpg";
@@ -59,11 +60,22 @@ export default function Home() {
   const [bgColor, setBgColor] = useState("bg-transparent");
   const [fontColor, setFontColor] = useState("text-white");
   const [menuImage, setMenuImage] = useState<StaticImageData>(menu);
+  const [wordsHeader, setWordsHeader] = useState("Unhira Agrikultur");
   const router = useRouter();
 
   const handleNavigate = (url: string) => {
     router.push(url);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (wordsHeader === "Unhira Agrikultur") {
+        setWordsHeader("Solusi Bisnis Kuliner Anda");
+      } else {
+        setWordsHeader("Unhira Agrikultur");
+      }
+    }, 4000);
+  }, [wordsHeader]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +100,7 @@ export default function Home() {
   useEffect(() => {
     const WOW = require("wowjs");
     const wow = new WOW.WOW({
-      live: false, // Opsi ini untuk tidak memantau elemen baru yang ditambahkan secara dinamis
+      live: true, // Opsi ini untuk tidak memantau elemen baru yang ditambahkan secara dinamis
     });
     wow.init();
   }, []);
@@ -98,8 +110,11 @@ export default function Home() {
         className={`border-none flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${bgColor}`}
       >
         <div>
-          <h1 className="font-bold text-xl text-coolgreen">
-            Unhira Agrikultur
+          <h1
+            key={wordsHeader}
+            className="font-bold text-lg text-coolgreen wow animate__animated animate__fadeIn"
+          >
+            {wordsHeader}
           </h1>
         </div>
         <div>
@@ -222,7 +237,7 @@ export default function Home() {
             alt="Supplier Sayur dan Buah Segar Terbaik di Bekasi"
           />
           <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
-            <h1 className="text-[1.6rem] text-center md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
+            <h1 className="text-[1.6rem] text-center px-3 md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
               <BannerTitle />
             </h1>
             <h2 className="text-base p-4 md:px-8 xl:px-0 text-center md:text-xl md:p-0 lg:text-xl mt-2">
@@ -244,10 +259,10 @@ export default function Home() {
               <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
                 <CompanyName />
               </h1>
-              <p className="text-coolblack mb-2 text-justify">
+              <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
                 <AboutCompany1 />
               </p>
-              <p className="text-coolblack text-justify">
+              <p className="text-[15px] md:text-base text-coolblack text-justify">
                 <AboutCompany2 />
               </p>
             </div>
@@ -273,7 +288,7 @@ export default function Home() {
               <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
                 Unhira Agrikultur
               </h1>
-              <p className="text-coolblack text-justify">
+              <p className="text-[15px] md:text-base text-coolblack text-justify">
                 Pada proses pengadaan barang, kami bermitra dengan petani lokal
                 untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
                 barang yang baik. Untuk beberapa jenis sayur seperti selada,
@@ -307,7 +322,7 @@ export default function Home() {
                       src={toa}
                       alt="respon cepat"
                     />
-                    <p className="text-coolblack">
+                    <p className="text-coolblack text-[15px] md:text-base">
                       Respon cepat dan komunikatif
                     </p>
                   </CardContent>
@@ -319,7 +334,7 @@ export default function Home() {
                       src={payment}
                       alt="sistem pembayaran fleksibel"
                     />
-                    <p className="text-coolblack">
+                    <p className="text-coolblack text-[15px] md:text-base">
                       Sistem pembayaran fleksibel
                     </p>
                   </CardContent>
@@ -331,7 +346,9 @@ export default function Home() {
                       src={box}
                       alt="tidak ada minimum pesanan"
                     />
-                    <p className="text-coolblack">Tidak ada minimum pesanan</p>
+                    <p className="text-coolblack text-[15px] md:text-base">
+                      Tidak ada minimum pesanan
+                    </p>
                   </CardContent>
                 </Card>
                 <Card className="border-none drop-shadow-xl wow animate__animated animate__fadeInUp">
@@ -341,7 +358,7 @@ export default function Home() {
                       src={order}
                       alt="menerima pesanan di luar list order"
                     />
-                    <p className="text-coolblack">
+                    <p className="text-coolblack text-[15px] md:text-base">
                       Menerima pesanan di luar list order
                     </p>
                   </CardContent>
@@ -353,7 +370,7 @@ export default function Home() {
                       src={guarantee}
                       alt="menerima klaim produk cacat atau tidak sesuai"
                     />
-                    <p className="text-coolblack">
+                    <p className="text-coolblack text-[15px] md:text-base">
                       Menerima klaim produk cacat atau tidak sesuai
                     </p>
                   </CardContent>
@@ -496,7 +513,7 @@ export default function Home() {
               Syarat dan Ketentuan
             </h1>
             <Card className="border-none p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] w-[87%] md:w-[80%] drop-shadow-none">
-              <CardContent className="pt-6">
+              <CardContent className="pt-6 text-[15px] md:text-base">
                 <p className="text-coolblack wow animate__animated animate__fadeIn">
                   Order dilakukan maksimal H-1 pengiriman.
                 </p>
