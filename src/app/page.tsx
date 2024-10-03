@@ -30,6 +30,7 @@ import {
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
+import ownerAndFarmer2 from "../../public/assets/images/foto-dengan-petani2.jpg";
 import vegetables from "../../public/assets/images/vegetables1.jpg";
 import closeUpVegetables from "../../public/assets/images/close-up-vegetables.jpg";
 import toa from "../../public/assets/icons/toa.svg";
@@ -265,6 +266,35 @@ export default function Home() {
             alt="foto pemilik unhira agrikultur bersama petani"
           />
           <div className="flex items-center justify-center">
+            <div className="max-w-[75%] md:max-w-[65%] wow animate__animated animate__fadeIn">
+              <h2 className="text-base md:text-lg text-coolgreen font-semibold">
+                Tentang Perusahaan
+              </h2>
+              <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
+                Unhira Agrikultur
+              </h1>
+              <p className="text-coolblack text-justify">
+                Pada proses pengadaan barang, kami bermitra dengan petani lokal
+                untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
+                barang yang baik. Untuk beberapa jenis sayur seperti selada,
+                pakcoy, dan lolorosa juga kami memiliki kebun sendiri yang di
+                kelola dengan metode hidroponik untuk menjamin ketersediaan
+                barang dengan kualitas terbaik. Langkah ini kami ambil untuk
+                mencegah sering terjadinya minimnya ketersediaan sayur
+                berkualitas disaat musim hujan.
+              </p>
+              {/* <p className="text-coolblack text-justify">
+                Kami juga bekerjasama dengan banyak pedagang yang saling
+                berkomitmen dgn kualitas untuk memenuhi kebutuhan buah dan
+                groceries dengan kualitas dan kapasitas yang
+                diinginkan pelanggan kami.
+              </p> */}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col-reverse items-center justify-center gap-9 lg:items-center lg:justify-between lg:flex-row lg:gap-0 py-14">
+          <div className="flex items-center justify-center w-full">
             <div className="max-w-[85%]">
               <h1 className="font-bold text-xl md:text-[1.6rem] text-center text-coolyellow mb-6 wow animate__animated animate__fadeIn">
                 Mengapa Harus Memilih Kami?
@@ -331,6 +361,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <Image
+            className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-none lg:rounded-l-md"
+            src={ownerAndFarmer2}
+            alt="foto pemilik unhira agrikultur bersama petani"
+          />
         </div>
 
         <div className="md:p-4">

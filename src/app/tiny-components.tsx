@@ -4,7 +4,7 @@ import mail from "../../public/assets/icons/mail.png";
 import { Separator } from "@/components/ui/separator";
 
 export const BannerTitle = () => {
-  return <span>Supplier Sayur dan Buah</span>;
+  return <span>Solusi Bisnis Kuliner Anda</span>;
 };
 
 export const CompanyName = () => {
@@ -24,11 +24,11 @@ export const AboutCompany1 = () => {
   return (
     <span>
       Kami adalah perusahaan yang bergerak di bidang pengadaan barang berupa
-      sayur, buah, dan groceries. Pada proses pengadaan barang, kami bermitra
-      dengan petani lokal untuk memenuhi kebutuhan sayuran khusus dengan standar
-      kualitas barang yang baik. Bekerjasama dengan banyak pedagang UMKM untuk
-      memenuhi kebutuhan buah dan groceries dengan kualitas dan kapasitas yang
-      diinginkan pelanggan kami.
+      sayur, buah, dan groceries untuk kebutuhan hotel, restoran, dan kafe.
+      Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas barang dan
+      pelayanan terbaik untuk mencapai visi kami, yaitu menjadi perusahaan
+      supplier terbaik yang selalu dapat diandalkan dengan mengutamakan kepuasan
+      pelanggan.
     </span>
   );
 };
@@ -36,9 +36,9 @@ export const AboutCompany1 = () => {
 export const AboutCompany2 = () => {
   return (
     <span>
-      Perusahaan kami bersifat B2B karena hanya menjadi mitra usaha kuliner dan
-      pariwisata yang menjamin ketersediaan bahan baku yang dibutuhkan
-      pelanggan- pelanggan kami.
+      Kami juga bekerjasama dengan banyak pedagang yang saling berkomitmen dgn
+      kualitas untuk memenuhi kebutuhan buah dan groceries dengan kualitas dan
+      kapasitas yang diinginkan pelanggan kami.
     </span>
   );
 };
