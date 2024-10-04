@@ -43,9 +43,23 @@ export const AboutCompany2 = () => {
 export const AboutCompany3 = () => {
   return (
     <span>
-      Kami juga bekerjasama dengan banyak pedagang yang saling berkomitmen dgn
-      kualitas untuk memenuhi kebutuhan buah dan groceries dengan kualitas dan
-      kapasitas yang diinginkan pelanggan kami.
+      Kami juga bekerjasama dengan banyak pedagang yang saling berkomitmen
+      dengan kualitas untuk memenuhi kebutuhan buah dan groceries dengan
+      kualitas dan kapasitas yang diinginkan pelanggan kami.
+    </span>
+  );
+};
+
+export const AboutCompany4 = () => {
+  return (
+    <span>
+      Pada proses pengadaan barang, kami bermitra dengan petani lokal untuk
+      memenuhi kebutuhan sayuran khusus dengan standar kualitas barang yang
+      baik. Untuk beberapa jenis sayur seperti selada, pakcoy, dan lolorosa juga
+      kami memiliki kebun sendiri yang di kelola dengan metode hidroponik untuk
+      menjamin ketersediaan barang dengan kualitas terbaik. Langkah ini kami
+      ambil untuk mencegah sering terjadinya minimnya ketersediaan sayur
+      berkualitas disaat musim hujan.
     </span>
   );
 };

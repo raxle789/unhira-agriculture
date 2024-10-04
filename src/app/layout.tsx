@@ -18,7 +18,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Unhira Agrikultur - Supplier sayur dan buah di bekasi",
+  title: "Unhira Agrikultur - Supplier sayur dan buah bekasi",
   description:
     "Kami adalah perusahaan yang bergerak di bidang pengadaan barang berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran, dan kafe. Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas barang dan pelayanan terbaik.",
 };

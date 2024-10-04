@@ -45,6 +45,8 @@ import payment from "../../public/assets/icons/payment.svg";
 import guarantee from "../../public/assets/icons/guarantee.svg";
 import menu from "../../public/assets/icons/menu.svg";
 import blackMenu from "../../public/assets/icons/black-menu.svg";
+import topQuality from "../../public/assets/icons/top-quality.svg";
+import delivery from "../../public/assets/icons/delivery-time.svg";
 import { StaticImageData } from "next/image";
 import { partnerData } from "@/lib/partners";
 import { productData } from "@/lib/productData";
@@ -55,6 +57,7 @@ import {
   AboutCompany1,
   AboutCompany2,
   AboutCompany3,
+  AboutCompany4,
   BeforeUsing,
   AfterUsing,
   WishWords,
@@ -75,8 +78,6 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       if (wordsHeader === "Unhira Agrikultur") {
-        setWordsHeader("CV. Yayang Karunia Usaha");
-      } else if (wordsHeader === "CV. Yayang Karunia Usaha") {
         setWordsHeader("Solusi Bisnis Kuliner Anda");
       } else {
         setWordsHeader("Unhira Agrikultur");
@@ -299,14 +300,7 @@ export default function Home() {
                 Unhira Agrikultur
               </h1>
               <p className="text-[15px] md:text-base text-coolblack text-justify">
-                Pada proses pengadaan barang, kami bermitra dengan petani lokal
-                untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
-                barang yang baik. Untuk beberapa jenis sayur seperti selada,
-                pakcoy, dan lolorosa juga kami memiliki kebun sendiri yang di
-                kelola dengan metode hidroponik untuk menjamin ketersediaan
-                barang dengan kualitas terbaik. Langkah ini kami ambil untuk
-                mencegah sering terjadinya minimnya ketersediaan sayur
-                berkualitas disaat musim hujan.
+                <AboutCompany4 />
               </p>
               {/* <p className="text-coolblack text-justify">
                 Kami juga bekerjasama dengan banyak pedagang yang saling
@@ -329,11 +323,12 @@ export default function Home() {
                   <CardContent className="flex items-center gap-2 pt-5 p-5">
                     <Image
                       className="w-9 h-auto"
-                      src={toa}
-                      alt="respon cepat"
+                      src={topQuality}
+                      alt="bahan baku berkualitas untuk usaha kuliner"
                     />
                     <p className="text-coolblack text-[15px] md:text-base">
-                      Respon cepat dan komunikatif
+                      Menjamin ketersediaan bahan baku berkualitas untuk usaha
+                      kuliner
                     </p>
                   </CardContent>
                 </Card>
@@ -341,11 +336,23 @@ export default function Home() {
                   <CardContent className="flex items-center gap-2 pt-5 p-5">
                     <Image
                       className="w-9 h-auto"
-                      src={payment}
-                      alt="sistem pembayaran fleksibel"
+                      src={delivery}
+                      alt="pengiriman tepat waktu"
                     />
                     <p className="text-coolblack text-[15px] md:text-base">
-                      Sistem pembayaran fleksibel
+                      Pengiriman tepat waktu sesuai kebutuhan
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-none drop-shadow-xl wow animate__animated animate__fadeInUp">
+                  <CardContent className="flex items-center gap-2 pt-5 p-5">
+                    <Image
+                      className="w-9 h-auto"
+                      src={toa}
+                      alt="pelayanan ramah"
+                    />
+                    <p className="text-coolblack text-[15px] md:text-base">
+                      Pelayanan ramah dan komunikatif
                     </p>
                   </CardContent>
                 </Card>
@@ -366,10 +373,10 @@ export default function Home() {
                     <Image
                       className="w-9 h-auto"
                       src={order}
-                      alt="menerima pesanan di luar list order"
+                      alt="bisa melayani tambahan order"
                     />
                     <p className="text-coolblack text-[15px] md:text-base">
-                      Menerima pesanan di luar list order
+                      Bisa melayani tambahan order jika kekurangan barang
                     </p>
                   </CardContent>
                 </Card>
@@ -381,7 +388,8 @@ export default function Home() {
                       alt="menerima klaim produk cacat atau tidak sesuai"
                     />
                     <p className="text-coolblack text-[15px] md:text-base">
-                      Menerima klaim produk cacat atau tidak sesuai
+                      Pengembalian dan penggantian barang di hari yang sama jika
+                      ada ketidaksesuaian
                     </p>
                   </CardContent>
                 </Card>
@@ -429,7 +437,7 @@ export default function Home() {
           id="produk"
           className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-8"
         >
-          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
+          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
             Katalog Produk
           </h1>
           <div className="w-[80%]">
@@ -477,7 +485,7 @@ export default function Home() {
           id="mitra"
           className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-7"
         >
-          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow wow animate__animated animate__fadeIn">
+          <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
             Mitra Kami
           </h1>
           <Carousel
@@ -518,7 +526,7 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div id="column1" className="grid gap-4">
-              <div>
+              <div className="wow animate__animated animate__fadeIn">
                 <Image
                   className="h-auto md:h-[200px] max-w-full rounded-lg object-cover object-center"
                   src={doksi2}
@@ -555,7 +563,7 @@ export default function Home() {
               </div> */}
             </div>
             <div id="column2" className="grid gap-4">
-              <div>
+              <div className="wow animate__animated animate__fadeIn">
                 <Image
                   className="h-auto max-w-full rounded-lg object-cover object-center"
                   src={doksi5}
@@ -592,7 +600,7 @@ export default function Home() {
               </div> */}
             </div>
             <div id="column3" className="grid gap-4">
-              <div>
+              <div className="wow animate__animated animate__fadeIn">
                 <Image
                   className="h-auto md:h-[200px] max-w-full rounded-lg object-cover object-center"
                   src={doksi3}
@@ -603,7 +611,7 @@ export default function Home() {
                   // layout="fill"
                 />
               </div>
-              <div>
+              <div className="wow animate__animated animate__fadeIn">
                 <Image
                   className="h-auto md:h-[250px] max-w-full rounded-lg object-cover object-center "
                   src={doksi1}
@@ -628,7 +636,7 @@ export default function Home() {
               </div> */}
             </div>
             <div id="column4" className="grid gap-4">
-              <div>
+              <div className="wow animate__animated animate__fadeIn">
                 <Image
                   className="h-auto max-w-full rounded-lg object-cover object-center"
                   src={doksi4}
