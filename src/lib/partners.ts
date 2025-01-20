@@ -2,13 +2,7 @@ import pakboySteak from "../../public/assets/images/pakboy-steak.jpg";
 import baraApiSteak from "../../public/assets/images/bara-api-steak.jpg";
 import doubleUSteak from "../../public/assets/images/double-u-steak.jpg";
 import shukagrillBekasi from "../../public/assets/images/shukagrill-bekasi.jpg";
-import { StaticImageData } from "next/image";
-
-type TPartner = {
-  image: StaticImageData;
-  name: string;
-  alt: string;
-};
+import type { TPartner } from "@/types/typesDefinitions";
 
 export const partnerData: TPartner[] = [
   {

@@ -1,19 +1,12 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+import HeaderComponent from "@/components/header";
+import { Footer } from "./tiny-components";
+import { FaWhatsapp } from "react-icons/fa6";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -351,7 +344,22 @@ export default function RootLayout({
         /> */}
       </head>
       <body className={`${inter.className} antialiased`}>
+        <HeaderComponent />
         {children}
+        <Footer />
+        <Button
+          className="fixed bottom-5 right-5 shadow-lg rounded-full p-[22px] z-20 bg-white"
+          variant="secondary"
+        >
+          <Link
+            className="flex items-center justify-center gap-2"
+            href="https://wa.me/628979246882?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat Whatsapp <FaWhatsapp className="w-6 h-auto" />
+          </Link>
+        </Button>
         <Analytics />
       </body>
     </html>

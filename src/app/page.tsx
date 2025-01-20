@@ -1,17 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -21,12 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
@@ -41,13 +27,9 @@ import doksi5 from "../../public/assets/images/doksi5.jpg";
 import toa from "../../public/assets/icons/toa.svg";
 import box from "../../public/assets/icons/box.svg";
 import order from "../../public/assets/icons/order.svg";
-import payment from "../../public/assets/icons/payment.svg";
 import guarantee from "../../public/assets/icons/guarantee.svg";
-import menu from "../../public/assets/icons/menu.svg";
-import blackMenu from "../../public/assets/icons/black-menu.svg";
 import topQuality from "../../public/assets/icons/top-quality.svg";
 import delivery from "../../public/assets/icons/delivery-time.svg";
-import { StaticImageData } from "next/image";
 import { partnerData } from "@/lib/partners";
 import { productData } from "@/lib/productData";
 import {
@@ -61,50 +43,9 @@ import {
   BeforeUsing,
   AfterUsing,
   WishWords,
-  Footer,
 } from "./tiny-components";
 
 export default function Home() {
-  const [bgColor, setBgColor] = useState("bg-transparent");
-  const [fontColor, setFontColor] = useState("text-white");
-  const [menuImage, setMenuImage] = useState<StaticImageData>(menu);
-  const [wordsHeader, setWordsHeader] = useState("Unhira Agrikultur");
-  const router = useRouter();
-
-  const handleNavigate = (url: string) => {
-    router.push(url);
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (wordsHeader === "Unhira Agrikultur") {
-        setWordsHeader("Solusi Bisnis Kuliner Anda");
-      } else {
-        setWordsHeader("Unhira Agrikultur");
-      }
-    }, 4000);
-  }, [wordsHeader]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setBgColor("bg-background");
-        setFontColor("text-coolblack");
-        setMenuImage(blackMenu);
-      } else {
-        setBgColor("bg-transparent");
-        setFontColor("text-white");
-        setMenuImage(menu);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   useEffect(() => {
     const WOW = require("wowjs");
     const wow = new WOW.WOW({
@@ -114,129 +55,6 @@ export default function Home() {
   }, []);
   return (
     <>
-      <header
-        className={`border-none flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${bgColor}`}
-      >
-        <div>
-          <h1
-            key={wordsHeader}
-            className="font-bold text-lg text-coolgreen wow animate__animated animate__fadeIn"
-          >
-            {wordsHeader}
-          </h1>
-        </div>
-        <div>
-          <NavigationMenu className="hidden lg:block">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link href="#beranda" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
-                  >
-                    Beranda
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#tentang-kami" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
-                  >
-                    Tentang Kami
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#produk" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
-                  >
-                    Produk
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#mitra" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
-                  >
-                    Mitra
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#s&k" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-[13px] transition-colors duration-200 ${fontColor} bg-transparent font-semibold hover:bg-transparent hover:text-coolyellow uppercase active:bg-transparent focus:bg-transparent focus:text-coolyellow ml-6`}
-                  >
-                    S&K
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                className="lg:hidden hover:bg-transparent active:bg-transparent focus:bg-transparent"
-              >
-                <Image className="w-7 h-auto" src={menuImage} alt="ikon menu" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent>
-              <div className="flex flex-col items-start justify-center gap-3 mt-5">
-                <SheetClose asChild>
-                  <Button
-                    variant="ghost"
-                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
-                    onClick={() => handleNavigate("#beranda")}
-                  >
-                    Beranda
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button
-                    variant="ghost"
-                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
-                    onClick={() => handleNavigate("#tentang-kami")}
-                  >
-                    Tentang Kami
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button
-                    variant="ghost"
-                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
-                    onClick={() => handleNavigate("#produk")}
-                  >
-                    Produk
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button
-                    variant="ghost"
-                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
-                    onClick={() => handleNavigate("#mitra")}
-                  >
-                    Mitra
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button
-                    variant="ghost"
-                    className="hover:bg-transparent active:bg-transparent active:text-coolyellow focus:bg-transparent"
-                    onClick={() => handleNavigate("#s&k")}
-                  >
-                    S&K
-                  </Button>
-                </SheetClose>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </header>
-
       <main className="bg-coolgray-1">
         <div id="beranda" className="relative h-screen">
           <Image
@@ -442,7 +260,7 @@ export default function Home() {
           </h1>
           <div className="w-[80%]">
             <div className="grid grid-flow-col grid-rows-2 auto-rows-max gap-6 overflow-x-auto scroll-smooth products-container">
-              {productData.map((item, index) => (
+              {productData.slice(0, 10).map((item, index) => (
                 <Card
                   key={index}
                   className="border-none w-40 h-40 wow animate__animated animate__fadeIn"
@@ -461,6 +279,14 @@ export default function Home() {
                 </Card>
               ))}
             </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <Button
+              className="shadow-lg bg-white rounded-full"
+              variant="secondary"
+            >
+              <Link href="/produk">Lihat Produk Lainnya</Link>
+            </Button>
           </div>
         </div>
 
@@ -734,8 +560,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-50 z-0" />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

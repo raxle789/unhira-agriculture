@@ -4,7 +4,9 @@ import mail from "../../public/assets/icons/mail.png";
 import { Separator } from "@/components/ui/separator";
 
 export const BannerTitle = () => {
-  return <span>Supplier Sayur dan Buah Bekasi</span>;
+  return (
+    <span>Supplier Sayur dan Buah Bekasi - Solusi Bisnis Kuliner Anda</span>
+  );
 };
 
 export const CompanyName = () => {
