@@ -102,15 +102,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Aragula Rocket",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -123,15 +123,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Brokoli",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -144,15 +144,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Daun Ketumbar",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -165,15 +165,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Kol Ungu",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -186,15 +186,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Lettuce",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -207,15 +207,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Lolorosa",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -228,15 +228,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Parsley",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -249,15 +249,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Radisio",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -270,15 +270,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Romaine",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -291,15 +291,15 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "Product",
       name: "Thyme",
-      image: "https://www.unhiraagrikultur.com/#produk",
+      image: "https://www.unhiraagrikultur.com/produk",
       // description: "Deskripsi produk pertama.",
       // sku: "SKU12345",
       offers: {
         "@type": "Offer",
         priceCurrency: "IDR",
         price: "50000",
-        url: "https://www.unhiraagrikultur.com/#produk",
-        priceValidUntil: "2025-06-30",
+        url: "https://www.unhiraagrikultur.com/produk",
+        priceValidUntil: "2025-12-30",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {
@@ -320,7 +320,7 @@ export default function RootLayout({
   // };
 
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-[70px]">
+    <html lang="id" className="scroll-smooth scroll-pt-[70px]">
       <head>
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.unhiraagrikultur.com/" />
@@ -343,6 +343,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerSchema) }}
         /> */}
       </head>
+
       <body className={`${inter.className} antialiased`}>
         <HeaderComponent />
         {children}
@@ -360,6 +361,7 @@ export default function RootLayout({
             Chat Whatsapp <FaWhatsapp className="w-6 h-auto" />
           </Link>
         </Button>
+
         <Analytics />
       </body>
     </html>

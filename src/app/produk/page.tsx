@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProductCard from "./product-card";
 
 export const metadata: Metadata = {
-  title: "Katalog Produk - Unhira Agrikultur",
+  title: "Katalog Produk | Unhira Agrikultur - Supplier sayur dan buah bekasi",
   description:
     "Kami adalah perusahaan yang bergerak di bidang pengadaan barang berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran, dan kafe. Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas barang dan pelayanan terbaik.",
 };

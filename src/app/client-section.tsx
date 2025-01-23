@@ -1,8 +1,8 @@
-import Image from "next/image";
-import bannerImage from "../../public/assets/images/banner.jpg";
-import ownerPhoto from "../../public/assets/images/profil.jpg";
-import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -30,93 +30,16 @@ import {
 } from "@/components/ui/carousel";
 import vegetables from "../../public/assets/images/vegetables1.jpg";
 
-export default function Home() {
+export default function ClientSection() {
+  useEffect(() => {
+    const WOW = require("wowjs");
+    const wow = new WOW.WOW({
+      live: true, // Opsi ini untuk tidak memantau elemen baru yang ditambahkan secara dinamis
+    });
+    wow.init();
+  }, []);
   return (
-    <main className="bg-coolgray-1">
-      <div id="beranda" className="relative h-screen">
-        <Image
-          className="absolute w-full h-full object-left xl:object-center object-cover"
-          src={bannerImage}
-          alt="Supplier Sayur dan Buah Segar Terbaik Bekasi"
-        />
-        <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
-          <h1 className="text-[1.6rem] text-center px-3 md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
-            Supplier Sayur dan Buah Bekasi - Solusi Bisnis Kuliner Anda
-          </h1>
-          <h2 className="text-base p-4 md:px-8 xl:px-0 text-center md:text-xl md:p-0 lg:text-xl mt-2">
-            Visi kami menjadi supplier terbaik yang selalu dapat diandalkan
-            dengan mengutamakan kepuasan pelanggan
-          </h2>
-        </div>
-        <div className="absolute inset-0 bg-black opacity-50 z-0" />
-      </div>
-
-      <div
-        id="tentang-kami"
-        className="flex flex-col-reverse items-center justify-center gap-9 lg:gap-0 lg:flex-row lg:items-center lg:justify-between pt-20 pb-14"
-      >
-        <div className="flex items-center justify-center">
-          <div className="max-w-[75%] md:max-w-[65%] wow animate__animated animate__fadeIn">
-            <h2 className="text-base md:text-lg text-coolgreen font-semibold">
-              Tentang Perusahaan
-            </h2>
-            <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
-              Unhira Agrikultur
-            </h1>
-            <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
-              Kami adalah perusahaan yang bergerak di bidang pengadaan barang
-              berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran,
-              dan kafe.
-            </p>
-            <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
-              Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas
-              barang dan pelayanan terbaik untuk mencapai visi kami, yaitu
-              menjadi perusahaan supplier terbaik yang selalu dapat diandalkan
-              dengan mengutamakan kepuasan pelanggan.
-            </p>
-            <p className="text-[15px] md:text-base text-coolblack text-justify">
-              Kami juga bekerjasama dengan banyak pedagang yang saling
-              berkomitmen dengan kualitas untuk memenuhi kebutuhan buah dan
-              groceries dengan kualitas dan kapasitas yang diinginkan pelanggan
-              kami.
-            </p>
-          </div>
-        </div>
-        <Image
-          className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-none lg:rounded-l-md"
-          src={ownerPhoto}
-          alt="foto pemilik unhira agrikultur"
-        />
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-9 lg:items-center lg:justify-between lg:flex-row lg:gap-0 py-14">
-        <Image
-          className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-l-none lg:rounded-r-md"
-          src={ownerAndFarmer}
-          alt="foto pemilik unhira agrikultur bersama petani"
-        />
-        <div className="flex items-center justify-center">
-          <div className="max-w-[75%] md:max-w-[65%] wow animate__animated animate__fadeIn">
-            <h2 className="text-base md:text-lg text-coolgreen font-semibold">
-              Tentang Perusahaan
-            </h2>
-            <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
-              Unhira Agrikultur
-            </h1>
-            <p className="text-[15px] md:text-base text-coolblack text-justify">
-              Pada proses pengadaan barang, kami bermitra dengan petani lokal
-              untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
-              barang yang baik. Untuk beberapa jenis sayur seperti selada,
-              pakcoy, dan lolorosa juga kami memiliki kebun sendiri yang di
-              kelola dengan metode hidroponik untuk menjamin ketersediaan barang
-              dengan kualitas terbaik. Langkah ini kami ambil untuk mencegah
-              sering terjadinya minimnya ketersediaan sayur berkualitas disaat
-              musim hujan.
-            </p>
-          </div>
-        </div>
-      </div>
-
+    <>
       <div className="flex flex-col-reverse items-center justify-center gap-9 lg:items-center lg:justify-between lg:flex-row lg:gap-0 py-14">
         <div className="flex items-center justify-center w-full">
           <div className="max-w-[85%]">
@@ -502,6 +425,6 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
       </div>
-    </main>
+    </>
   );
 }
