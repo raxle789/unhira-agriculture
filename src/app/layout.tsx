@@ -322,12 +322,13 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth scroll-pt-[70px]">
       <head>
+        <meta
+          name="keywords"
+          content="supplier sayur dan buah bekasi, Brokoli, Lettuce, Tomat Cherry, Tomat Beef, Ceri Kuning, Kol, Selada, Parsley, Sawi, Daun Bawang, Pakcoy, Baby Corn, Lemon California, sayur segar, buah segar, Unhira Agrikultur"
+        />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.unhiraagrikultur.com/" />
-        <link
-          rel="next"
-          href="https://www.unhiraagrikultur.com/#tentang-kami"
-        />
+        <link rel="next" href="https://www.unhiraagrikultur.com/produk" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
