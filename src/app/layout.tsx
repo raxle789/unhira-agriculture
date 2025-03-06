@@ -324,7 +324,7 @@ export default function RootLayout({
       <head>
         <meta
           name="keywords"
-          content="supplier sayur dan buah bekasi, Brokoli, Lettuce, Tomat Cherry, Tomat Beef, Ceri Kuning, Kol, Selada, Parsley, Sawi, Daun Bawang, Pakcoy, Baby Corn, Lemon California, sayur segar, buah segar, Unhira Agrikultur"
+          content="supplier sayur dan buah bekasi, Brokoli, Lettuce, Tomat Cherry, Tomat Beef, Ceri Kuning, Kol, Selada, Parsley, Sawi, Daun Bawang, Pakcoy, Baby Corn, Lemon California, sayur segar, buah segar, Unhira Agrikultur, supplier bahan baku restoran dan kafe, supplier sayuran segar, supplier sayur murah dan lengkap, penyedia sayur dan buah, supplier sayur berkualitas, supplier bahan makanan restoran dan kafe, jual sayur dan buah segar di bekasi, jual sayur di bekasi, jual buah di bekasi"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.unhiraagrikultur.com/" />
