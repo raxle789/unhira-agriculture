@@ -26,6 +26,8 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Unhira Agrikultur",
     url: "https://www.unhiraagrikultur.com",
+    description:
+      "Unhira Agrikultur adalah supplier sayur dan buah di Bekasi. Temukan berbagai sayuran dan buah segar berkualitas tinggi dari Unhira Agrikultur. Kami menyediakan Brokoli, Lettuce, Tomat Cherry, Baby Corn, Lemon California, dan masih banyak lagi. Pesan sekarang untuk kebutuhan segar Anda!",
     // "logo": "https://www.domain-anda.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
