@@ -1,6 +1,6 @@
 import Image from "next/image";
 import bannerImage from "../../public/assets/images/banner.jpg";
-import ownerPhoto from "../../public/assets/images/profil.jpg";
+import ownerPhoto from "../../public/assets/images/profil.jpeg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";

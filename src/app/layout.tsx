@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Unhira Agrikultur - Supplier sayur dan buah bekasi",
   description:
-    "Kami adalah perusahaan yang bergerak di bidang pengadaan barang berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran, dan kafe. Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas barang dan pelayanan terbaik.",
+    "Kami adalah supplier sayur dan buah terpercaya di Bekasi, menyediakan produk berkualitas untuk hotel, restoran, dan kafe. Kami berkomitmen menghadirkan sayur dan buah segar dengan pelayanan terbaik untuk memenuhi kebutuhan bisnis Anda.",
 };
 
 export default function RootLayout({
@@ -42,7 +42,7 @@ export default function RootLayout({
       address: {
         "@type": "PostalAddress",
         streetAddress:
-          "Jl. Permata Hijau Permai Jl. Mirah No.20 Blok BR, Kaliabang Tengah, Kec. Bekasi Utara, Kota Bekasi, Jawa Barat",
+          "Jl. Permata Hijau Permai Jl. Mirah No.20 Blok BR, Kaliabang Tengah, Kecamatan Bekasi Utara, Kota Bekasi, Jawa Barat",
         addressLocality: "Bekasi",
         postalCode: "17125",
         addressCountry: "ID",
