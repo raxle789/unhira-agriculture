@@ -2,6 +2,7 @@ import Image from "next/image";
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpeg";
 import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
+import profileTeam from "../../public/assets/images/profile-team.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,11 +45,164 @@ export default function Home() {
             Supplier Sayur dan Buah Bekasi - Solusi Bisnis Kuliner Anda
           </h1>
           <h2 className="text-base p-4 md:px-8 xl:px-0 text-center md:text-xl md:p-0 lg:text-xl mt-2">
-            Visi kami menjadi supplier terbaik yang selalu dapat diandalkan
-            dengan mengutamakan kepuasan pelanggan
+            Butuh Sayur dan Buah Segar untuk Bisnis Kuliner Anda? Yuk, kenalan
+            dengan Unhira Agrikultur, Supplier Andalan Anda!
           </h2>
         </div>
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
+      </div>
+
+      <div
+        id="produk"
+        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-8"
+      >
+        <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
+          Katalog Produk
+        </h1>
+        <div className="w-[80%]">
+          <div className="grid grid-flow-col grid-rows-2 auto-rows-max gap-6 overflow-x-auto scroll-smooth products-container">
+            {productData.slice(0, 10).map((item, index) => (
+              <Card
+                key={index}
+                className="border-none w-40 h-40 wow animate__animated animate__fadeIn"
+              >
+                <CardContent className="relative aspect-square overflow-hidden group p-0">
+                  <Image
+                    className="absolute w-full h-full object-cover rounded-lg"
+                    src={item.image}
+                    alt={item.alt}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-base text-white">{item.name}</p>
+                  </div>
+                  <div className="absolute rounded-lg inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity z-5" />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <Button
+            className="shadow-lg bg-white rounded-full"
+            variant="secondary"
+          >
+            <Link href="/produk">Lihat Produk Lainnya</Link>
+          </Button>
+        </div>
+      </div>
+
+      <div className="md:p-4">
+        <div className="flex flex-col items-center justify-center py-14 md:rounded-md bg-coolgreen">
+          <h1 className="font-bold text-xl md:text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
+            Manfaat Bermitra Dengan Kami
+          </h1>
+          <div className="flex flex-col items-center justify-center xl:items-stretch xl:flex-row gap-6">
+            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
+              <CardHeader>
+                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
+                  Sebelum
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-[15px] md:text-base">
+                  <p className="text-coolblack">
+                    Jumlah barang yang di dapat tidak sesuai kebutuhan
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Kualitas barang yang didapat tidak bagus
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Harga barang yang di dapat sangat tinggi
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Tidak bisa mengklaim barang yang rusak
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">Pelayanan yang buruk</p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Kebutuhan mendadak tidak dapat dipenuhi
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
+              <CardHeader>
+                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
+                  Sesudah
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-[15px] md:text-base">
+                  <p className="text-coolblack">
+                    Barang yang dikirim sesuai pesanan dan kebutuhan
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Kualitas barang bagus dan pengiriman tepat waktu
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">Harga sangat bersaing</p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Dapat melayani kebutuhan mendadak
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Bisa mengklaim jika terdapat barang yang rusak
+                  </p>
+                  <Separator className="bg-coolblack my-2" />
+                  <p className="text-coolblack">
+                    Pelayanan yang baik dan bersedia menerima kritik saran dari
+                    pelanggan
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mitra"
+        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-7"
+      >
+        <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
+          Mitra Kami
+        </h1>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-[70%] lg:max-w-[80%]"
+        >
+          <CarouselContent>
+            {partnerData.map((item, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
+                <div>
+                  <Card className="border-none wow animate__animated animate__fadeIn">
+                    <CardContent className="relative aspect-square overflow-hidden group p-0">
+                      <Image
+                        className="absolute w-full h-full object-cover rounded-lg"
+                        src={item.image}
+                        alt={item.alt}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <p className="text-base text-white">{item.name}</p>
+                      </div>
+                      <div className="absolute rounded-lg inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity z-5" />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="border-none shadow-md" />
+          <CarouselNext className="border-none shadow-md" />
+        </Carousel>
       </div>
 
       <div
@@ -75,16 +229,15 @@ export default function Home() {
               dengan mengutamakan kepuasan pelanggan.
             </p>
             <p className="text-[15px] md:text-base text-coolblack text-justify">
-              Kami juga bekerjasama dengan banyak pedagang yang saling
-              berkomitmen dengan kualitas untuk memenuhi kebutuhan buah dan
-              groceries dengan kualitas dan kapasitas yang diinginkan pelanggan
-              kami.
+              Kami memiliki tim yang berkomitmen terhadap kualitas produk dan
+              pelayanan terbaik untuk customer kami, dan yang terpenting, lebih
+              dari sekedar jasa, kami juga menjadi teman baik untuk anda
             </p>
           </div>
         </div>
         <Image
           className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-none lg:rounded-l-md"
-          src={ownerPhoto}
+          src={profileTeam}
           alt="foto pemilik unhira agrikultur"
         />
       </div>
@@ -103,7 +256,7 @@ export default function Home() {
             <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
               Unhira Agrikultur
             </h1>
-            <p className="text-[15px] md:text-base text-coolblack text-justify">
+            <p className="text-[15px] md:text-base text-coolblack text-justify mb-2">
               Pada proses pengadaan barang, kami bermitra dengan petani lokal
               untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
               barang yang baik. Untuk beberapa jenis sayur seperti selada,
@@ -112,6 +265,12 @@ export default function Home() {
               dengan kualitas terbaik. Langkah ini kami ambil untuk mencegah
               sering terjadinya minimnya ketersediaan sayur berkualitas disaat
               musim hujan.
+            </p>
+            <p className="text-[15px] md:text-base text-coolblack text-justify">
+              Kami juga bekerjasama dengan banyak pedagang yang saling
+              berkomitmen dengan kualitas untuk memenuhi kebutuhan buah dan
+              groceries dengan kualitas dan kapasitas yang diinginkan pelanggan
+              kami.
             </p>
           </div>
         </div>
@@ -203,123 +362,9 @@ export default function Home() {
         </div>
         <Image
           className="w-[300px] lg:w-[400px] h-auto rounded-md lg:rounded-r-none lg:rounded-l-md"
-          src={ownerAndFarmer2}
+          src={ownerPhoto}
           alt="foto pemilik unhira agrikultur bersama petani"
         />
-      </div>
-
-      <div className="md:p-4">
-        <div className="flex flex-col items-center justify-center py-14 md:rounded-md bg-coolgreen">
-          <h1 className="font-bold text-xl md:text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
-            Manfaat Bermitra Dengan Kami
-          </h1>
-          <div className="flex flex-col items-center justify-center xl:items-stretch xl:flex-row gap-6">
-            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
-              <CardHeader>
-                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
-                  Sebelum
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-[15px] md:text-base">
-                  <p className="text-coolblack">
-                    Jumlah barang yang di dapat tidak sesuai kebutuhan
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kualitas barang yang didapat tidak bagus
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Harga barang yang di dapat sangat tinggi
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Tidak bisa mengklaim barang yang rusak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">Pelayanan yang buruk</p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kebutuhan mendadak tidak dapat dipenuhi
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
-              <CardHeader>
-                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
-                  Sesudah
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-[15px] md:text-base">
-                  <p className="text-coolblack">
-                    Barang yang dikirim sesuai pesanan dan kebutuhan
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kualitas barang bagus dan pengiriman tepat waktu
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">Harga sangat bersaing</p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Dapat melayani kebutuhan mendadak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Bisa mengklaim jika terdapat barang yang rusak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Pelayanan yang baik dan bersedia menerima kritik saran dari
-                    pelanggan
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="produk"
-        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-8"
-      >
-        <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
-          Katalog Produk
-        </h1>
-        <div className="w-[80%]">
-          <div className="grid grid-flow-col grid-rows-2 auto-rows-max gap-6 overflow-x-auto scroll-smooth products-container">
-            {productData.slice(0, 10).map((item, index) => (
-              <Card
-                key={index}
-                className="border-none w-40 h-40 wow animate__animated animate__fadeIn"
-              >
-                <CardContent className="relative aspect-square overflow-hidden group p-0">
-                  <Image
-                    className="absolute w-full h-full object-cover rounded-lg"
-                    src={item.image}
-                    alt={item.alt}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-base text-white">{item.name}</p>
-                  </div>
-                  <div className="absolute rounded-lg inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity z-5" />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <Button
-            className="shadow-lg bg-white rounded-full"
-            variant="secondary"
-          >
-            <Link href="/produk">Lihat Produk Lainnya</Link>
-          </Button>
-        </div>
       </div>
 
       <div className="relative h-80 md:h-60">
@@ -343,46 +388,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
       </div>
 
-      <div
-        id="mitra"
-        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-7"
-      >
-        <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
-          Mitra Kami
-        </h1>
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-[70%] lg:max-w-[80%]"
-        >
-          <CarouselContent>
-            {partnerData.map((item, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
-                <div>
-                  <Card className="border-none wow animate__animated animate__fadeIn">
-                    <CardContent className="relative aspect-square overflow-hidden group p-0">
-                      <Image
-                        className="absolute w-full h-full object-cover rounded-lg"
-                        src={item.image}
-                        alt={item.alt}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <p className="text-base text-white">{item.name}</p>
-                      </div>
-                      <div className="absolute rounded-lg inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity z-5" />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="border-none shadow-md" />
-          <CarouselNext className="border-none shadow-md" />
-        </Carousel>
-      </div>
-
-      <div className="px-8 xl:px-14 pb-24 relative">
+      <div className="px-8 xl:px-14 pb-24 relative pt-12">
         <h1 className="text-center mb-9 text-xl md:text-[1.6rem] font-bold text-coolyellow">
           Dokumentasi Tim
         </h1>
