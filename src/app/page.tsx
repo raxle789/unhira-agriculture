@@ -12,7 +12,7 @@ import guarantee from "../../public/assets/icons/guarantee.svg";
 import topQuality from "../../public/assets/icons/top-quality.svg";
 import delivery from "../../public/assets/icons/delivery-time.svg";
 import { productData } from "@/lib/productData";
-import closeUpVegetables from "../../public/assets/images/close-up-vegetables.jpg";
+import closeUpVegetables from "../../public/assets/images/close-up-vegetables_11zon.jpg";
 import doksi1 from "../../public/assets/images/doksi1.jpg";
 import doksi2 from "../../public/assets/images/doksi2.jpg";
 import doksi3 from "../../public/assets/images/doksi3.jpg";
