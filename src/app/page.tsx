@@ -216,7 +216,7 @@ export default function Home() {
             <h1 className="font-bold text-xl md:text-[1.6rem] leading-[1.7rem] text-coolyellow mb-3">
               Unhira Agrikultur
             </h1>
-            <p className="text-[15px] md:text-base text-coolblack text-justify mb-2">
+            <p className="text-[15px] md:text-base text-coolblack text-justify">
               Pada proses pengadaan barang, kami bermitra dengan petani lokal
               untuk memenuhi kebutuhan sayuran khusus dengan standar kualitas
               barang yang baik. Untuk beberapa jenis sayur seperti selada,
@@ -225,12 +225,6 @@ export default function Home() {
               dengan kualitas terbaik. Langkah ini kami ambil untuk mencegah
               sering terjadinya minimnya ketersediaan sayur berkualitas disaat
               musim hujan.
-            </p>
-            <p className="text-[15px] md:text-base text-coolblack text-justify">
-              Kami juga bekerjasama dengan banyak pedagang yang saling
-              berkomitmen dengan kualitas untuk memenuhi kebutuhan buah dan
-              groceries dengan kualitas dan kapasitas yang diinginkan pelanggan
-              kami.
             </p>
           </div>
         </div>
