@@ -5,11 +5,8 @@ import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
 import profileTeam from "../../public/assets/images/profile-team.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import ownerAndFarmer2 from "../../public/assets/images/foto-dengan-petani2.jpg";
-import toa from "../../public/assets/icons/toa.svg";
-import box from "../../public/assets/icons/box.svg";
 import order from "../../public/assets/icons/order.svg";
 import guarantee from "../../public/assets/icons/guarantee.svg";
 import topQuality from "../../public/assets/icons/top-quality.svg";
@@ -41,12 +38,13 @@ export default function Home() {
           alt="Supplier Sayur dan Buah Segar Terbaik Bekasi"
         />
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
-          <h1 className="text-[1.6rem] text-center px-3 md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
+          <h1 className="text-[1.6rem] text-center px-3 xl:px-4 md:text-4xl lg:text-5xl font-bold uppercase text-coolyellow">
             Supplier Sayur dan Buah Bekasi - Solusi Bisnis Kuliner Anda
           </h1>
-          <h2 className="text-base p-4 md:px-8 xl:px-0 text-center md:text-xl md:p-0 lg:text-xl mt-2">
-            Butuh Sayur dan Buah Segar untuk Bisnis Kuliner Anda? Yuk, kenalan
-            dengan Unhira Agrikultur, Supplier Andalan Anda!
+          <h2 className="text-base p-4 md:px-8 xl:px-14 text-center md:text-xl md:p-0 lg:text-xl mt-2">
+            Butuh sayur, buah dan bahan baku lain untuk bisnis kuliner anda? Yuk
+            kenalan dengan unhira. Kami hadir sebagai solusi bisnis kuliner
+            anda!
           </h2>
         </div>
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
@@ -54,10 +52,10 @@ export default function Home() {
 
       <div
         id="produk"
-        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-8"
+        className="py-20 flex flex-col justify-center items-center gap-8"
       >
         <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
-          Katalog Produk
+          Produk Utama Kami
         </h1>
         <div className="w-[80%]">
           <div className="grid grid-flow-col grid-rows-2 auto-rows-max gap-6 overflow-x-auto scroll-smooth products-container">
@@ -96,48 +94,11 @@ export default function Home() {
           <h1 className="font-bold text-xl md:text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
             Manfaat Bermitra Dengan Kami
           </h1>
-          <div className="flex flex-col items-center justify-center xl:items-stretch xl:flex-row gap-6">
-            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
-              <CardHeader>
-                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
-                  Sebelum
-                </CardTitle>
-              </CardHeader>
+          <div className="flex items-center justify-center">
+            <Card className="border-none max-w-[88%] p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
               <CardContent>
                 <div className="text-[15px] md:text-base">
-                  <p className="text-coolblack">
-                    Jumlah barang yang di dapat tidak sesuai kebutuhan
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kualitas barang yang didapat tidak bagus
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Harga barang yang di dapat sangat tinggi
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Tidak bisa mengklaim barang yang rusak
-                  </p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">Pelayanan yang buruk</p>
-                  <Separator className="bg-coolblack my-2" />
-                  <p className="text-coolblack">
-                    Kebutuhan mendadak tidak dapat dipenuhi
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-none w-[85%] md:w-[90%] lg:w-full xl:w-1/2 p-[13px] md:p-6 rounded-tl-xl rounded-br-xl rounded-tr-[50px] rounded-bl-[50px] drop-shadow-none wow animate__animated animate__fadeInUp">
-              <CardHeader>
-                <CardTitle className="text-xl lg:text-2xl text-coolyellow">
-                  Sesudah
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-[15px] md:text-base">
-                  <p className="text-coolblack">
+                  <p className="text-coolblack mt-2">
                     Barang yang dikirim sesuai pesanan dan kebutuhan
                   </p>
                   <Separator className="bg-coolblack my-2" />
@@ -168,7 +129,7 @@ export default function Home() {
 
       <div
         id="mitra"
-        className="pt-16 pb-[85px] flex flex-col justify-center items-center gap-7"
+        className="pt-[70px] pb-20 flex flex-col justify-center items-center gap-7"
       >
         <h1 className="text-xl md:text-[1.6rem] font-bold text-coolyellow">
           Mitra Kami
@@ -207,7 +168,7 @@ export default function Home() {
 
       <div
         id="tentang-kami"
-        className="flex flex-col-reverse items-center justify-center gap-9 lg:gap-0 lg:flex-row lg:items-center lg:justify-between pt-20 pb-14"
+        className="flex flex-col-reverse items-center justify-center gap-9 lg:gap-0 lg:flex-row lg:items-center lg:justify-between pt-10 pb-14"
       >
         <div className="flex items-center justify-center">
           <div className="max-w-[75%] md:max-w-[65%] wow animate__animated animate__fadeIn">
@@ -218,20 +179,19 @@ export default function Home() {
               Unhira Agrikultur
             </h1>
             <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
-              Kami adalah perusahaan yang bergerak di bidang pengadaan barang
-              berupa sayur, buah, dan groceries untuk kebutuhan hotel, restoran,
-              dan kafe.
+              Selain sayur dan buah, kami adalah supplier yg dapat memenuhi
+              segala kebutuhan bahan baku bisnis kuliner anda. Karena begitu
+              banyak para pebisnis kuliner yang kesulitan mencari semua bahan
+              baku pada 1 perusahaan, maka kami hadir untuk dapat memenuhi itu.
+              Meskipun pada nyata nya di lapangan, kami tentu memerlukan
+              beberapa waktu adaptasi untuk menyesuaikan barang yg diinginkan
+              sesuai spesifikasi pelanggan kami.
             </p>
             <p className="text-[15px] md:text-base text-coolblack mb-2 text-justify">
-              Perusahaan kami berkomitmen untuk selalu mengedepankan kualitas
-              barang dan pelayanan terbaik untuk mencapai visi kami, yaitu
-              menjadi perusahaan supplier terbaik yang selalu dapat diandalkan
-              dengan mengutamakan kepuasan pelanggan.
-            </p>
-            <p className="text-[15px] md:text-base text-coolblack text-justify">
-              Kami memiliki tim yang berkomitmen terhadap kualitas produk dan
-              pelayanan terbaik untuk customer kami, dan yang terpenting, lebih
-              dari sekedar jasa, kami juga menjadi teman baik untuk anda
+              Kami memiliki tim yang berkomitmen terhadap kualitas produk, dan
+              pelayanan yg baik untuk pelanggan kami. Dan yang terpenting, lebih
+              dari sekedar jasa, kami juga selalu ingin menjadi teman baik untuk
+              anda.
             </p>
           </div>
         </div>
@@ -291,8 +251,7 @@ export default function Home() {
                     alt="bahan baku berkualitas untuk usaha kuliner"
                   />
                   <p className="text-coolblack text-[15px] md:text-base">
-                    Menjamin ketersediaan bahan baku berkualitas untuk usaha
-                    kuliner
+                    Menjamin bahan baku berkualitas
                   </p>
                 </CardContent>
               </Card>
@@ -304,31 +263,7 @@ export default function Home() {
                     alt="pengiriman tepat waktu"
                   />
                   <p className="text-coolblack text-[15px] md:text-base">
-                    Pengiriman tepat waktu sesuai kebutuhan
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-none drop-shadow-xl wow animate__animated animate__fadeInUp">
-                <CardContent className="flex items-center gap-2 pt-5 p-5">
-                  <Image
-                    className="w-9 h-auto"
-                    src={toa}
-                    alt="pelayanan ramah"
-                  />
-                  <p className="text-coolblack text-[15px] md:text-base">
-                    Pelayanan ramah dan komunikatif
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-none drop-shadow-xl wow animate__animated animate__fadeInUp">
-                <CardContent className="flex items-center gap-2 pt-5 p-5">
-                  <Image
-                    className="w-9 h-auto"
-                    src={box}
-                    alt="tidak ada minimum pesanan"
-                  />
-                  <p className="text-coolblack text-[15px] md:text-base">
-                    Tidak ada minimum pesanan
+                    Pengiriman tepat waktu
                   </p>
                 </CardContent>
               </Card>
@@ -340,7 +275,7 @@ export default function Home() {
                     alt="bisa melayani tambahan order"
                   />
                   <p className="text-coolblack text-[15px] md:text-base">
-                    Bisa melayani tambahan order jika kekurangan barang
+                    Bisa memenuhi yg tambahan pesanan jika kekurangan barang
                   </p>
                 </CardContent>
               </Card>
@@ -352,8 +287,8 @@ export default function Home() {
                     alt="menerima klaim produk cacat atau tidak sesuai"
                   />
                   <p className="text-coolblack text-[15px] md:text-base">
-                    Pengembalian dan penggantian barang di hari yang sama jika
-                    ada ketidaksesuaian
+                    Pengembalian barang di hari yg sama jika terdapat kerusakan
+                    atau ketidaksesuaian
                   </p>
                 </CardContent>
               </Card>
@@ -367,7 +302,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative h-80 md:h-60">
+      <div className="relative h-80 md:h-60 mt-12 mb-9">
         <Image
           className="absolute w-full h-full object-cover object-bottom"
           src={vegetables}
@@ -378,17 +313,15 @@ export default function Home() {
             Unhira Agrikultur
           </h1>
           <h2 className="text-base mt-2 text-justify">
-            Besar harapan kami untuk pihak restoran atau hotel dapat
-            mempergunakan jasa yang telah kami tawarkan agar dapat membantu
-            menjamin ketersediaan dan kualitas bahan makanan kepada para tamu
-            sehingga meningkatkan brand image hotel sebagai hotel terbaik
-            pilihan masyarakat.
+            Kami sangat terbuka jika calon pelanggan ingin berkunjung ke tempat
+            kami, dengan sambutan penuh kesederhanaan, kami selalu ingin
+            membahagiakan setiap tamu dengan mencoba hidangan khas dari kami.
           </h2>
         </div>
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
       </div>
 
-      <div className="px-8 xl:px-14 pb-24 relative pt-12">
+      <div className="px-8 xl:px-14 pb-28 relative pt-12">
         <h1 className="text-center mb-9 text-xl md:text-[1.6rem] font-bold text-coolyellow">
           Dokumentasi Tim
         </h1>

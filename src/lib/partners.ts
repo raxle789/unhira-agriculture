@@ -6,16 +6,6 @@ import type { TPartner } from "@/types/typesDefinitions";
 
 export const partnerData: TPartner[] = [
   {
-    image: pakboySteak,
-    name: "Pakboy Steak",
-    alt: "bermitra dengan Pakboy Steak",
-  },
-  {
-    image: baraApiSteak,
-    name: "Bara Api Steak",
-    alt: "bermitra dengan Bara Api Steak",
-  },
-  {
     image: doubleUSteak,
     name: "Double U Steak",
     alt: "bermitra dengan Double U Steak",
@@ -24,5 +14,15 @@ export const partnerData: TPartner[] = [
     image: shukagrillBekasi,
     name: "Shukagrill Bekasi",
     alt: "bermitra dengan Shukagrill Bekasi",
+  },
+  {
+    image: pakboySteak,
+    name: "Pakboy Steak",
+    alt: "bermitra dengan Pakboy Steak",
+  },
+  {
+    image: baraApiSteak,
+    name: "Bara Api Steak",
+    alt: "bermitra dengan Bara Api Steak",
   },
 ];
