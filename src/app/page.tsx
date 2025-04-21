@@ -1,7 +1,7 @@
 import Image from "next/image";
 import bannerImage from "../../public/assets/images/banner.jpg";
 import ownerPhoto from "../../public/assets/images/profil.jpeg";
-import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani.jpg";
+import ownerAndFarmer from "../../public/assets/images/foto-dengan-petani2.jpg";
 import profileTeam from "../../public/assets/images/profile-team.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import vegetables from "../../public/assets/images/vegetables1.jpg";
+import onion from "../../public/assets/images/onion.png";
+import garlic from "../../public/assets/images/garlic.png";
+import pumpkin from "../../public/assets/images/pumpkin.png";
+import tomato from "../../public/assets/images/tomato.png";
+import corn from "../../public/assets/images/corn.png";
+import carrot from "../../public/assets/images/carrot.png";
+import potato from "../../public/assets/images/potato.png";
+import eggplant from "../../public/assets/images/eggplant.png";
+import wasabi from "../../public/assets/images/wasabi.png";
 
 export default function Home() {
   return (
@@ -89,7 +98,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:p-4">
+      <div className="md:p-4 relative">
         <div className="flex flex-col items-center justify-center py-14 md:rounded-md bg-coolgreen">
           <h1 className="font-bold text-xl md:text-[1.6rem] text-white mb-6 wow animate__animated animate__fadeIn">
             Manfaat Bermitra Dengan Kami
@@ -125,6 +134,46 @@ export default function Home() {
             </Card>
           </div>
         </div>
+        <Image
+          className="hidden lg:block absolute w-auto h-[80px] top-[80px] left-20 -rotate-45"
+          src={onion}
+          alt="bawang bombay"
+        />
+        <Image
+          className="hidden xl:block absolute w-auto h-[70px] top-[170px] left-[230px]"
+          src={pumpkin}
+          alt="labu"
+        />
+        <Image
+          className="hidden lg:block absolute w-auto h-[80px] top-[280px] left-[120px]"
+          src={wasabi}
+          alt="wasabi"
+        />
+        <Image
+          className="hidden xl:block absolute w-auto h-[70px] top-[360px] left-[260px] -rotate-45"
+          src={tomato}
+          alt="tomat"
+        />
+        <Image
+          className="hidden lg:block absolute w-auto h-[70px] top-[80px] right-20"
+          src={garlic}
+          alt="bawang putih"
+        />
+        <Image
+          className="hidden xl:block absolute w-auto h-[70px] top-[170px] right-[230px] rotate-45"
+          src={corn}
+          alt="jagung"
+        />
+        <Image
+          className="hidden lg:block absolute w-auto h-[70px] top-[280px] right-[120px]"
+          src={potato}
+          alt="kentang"
+        />
+        <Image
+          className="hidden xl:block absolute w-auto h-[70px] top-[370px] right-[260px] rotate-45"
+          src={carrot}
+          alt="wortel"
+        />
       </div>
 
       <div
