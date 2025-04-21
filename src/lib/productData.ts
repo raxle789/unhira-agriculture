@@ -1,5 +1,6 @@
 import aragulaRocket from "../../public/assets/images/produk/aragula-rocket.jpg";
 import brokoli from "../../public/assets/images/produk/brokoli.jpg";
+import basil from "../../public/assets/images/produk/basil.jpg";
 import daunKetumbar from "../../public/assets/images/produk/daun-ketumbar.jpg";
 import kolUngu from "../../public/assets/images/produk/kol-ungu.jpg";
 import lolorosa from "../../public/assets/images/produk/lolorosa.jpg";
@@ -38,9 +39,9 @@ export const productData: TProduct[] = [
     alt: "menyediakan Aragula Rocket",
   },
   {
-    image: brokoli,
-    name: "Brokoli",
-    alt: "menyediakan Brokoli",
+    image: horenzo,
+    name: "Horenzo",
+    alt: "menyediakan Horenzo",
   },
   {
     image: daunKetumbar,
@@ -106,11 +107,6 @@ export const productData: TProduct[] = [
     image: asparagus,
     name: "Asparagus",
     alt: "menyediakan Asparagus",
-  },
-  {
-    image: horenzo,
-    name: "Horenzo",
-    alt: "menyediakan Horenzo",
   },
   {
     image: comeo,
@@ -186,6 +182,16 @@ export const productData: TProduct[] = [
     image: pakcoyHidroponik,
     name: "Pakcoy Hidroponik",
     alt: "menyediakan Pakcoy Hidroponik",
+  },
+  {
+    image: brokoli,
+    name: "Brokoli",
+    alt: "menyediakan Brokoli",
+  },
+  {
+    image: basil,
+    name: "Basil",
+    alt: "menyediakan Basil",
   },
 ];
 
